@@ -1,12 +1,12 @@
 # Step 1 Import Libraries
 import pandas as pd
-#Meaning: Data va table format-la (Rows & Columns) handle panna pandas use panrom.
+#Meaning: Data va table format-la handle panna pandas use panrom.
 
 import numpy as np
 #Meaning: Maths calculation fast-a panna numpy use aagum.
 
 from sklearn.model_selection import train_test_split
-#Meaning: Namma kitta irukka data-va Training (padikka) matrum Testing (paritchai eludha) nu rendaa pirikka idhu use aagum.
+#Meaning: Namma kitta irukka data-va Training matrum Testing nu rendaa pirikka idhu use aagum.
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 #Meaning: Computer-ku English words puriyadhu, numbers dhaan puriyum. So, text-a numbers-a maatha indha tool use panrom.
@@ -33,7 +33,7 @@ warnings.filterwarnings("ignore")
 # Step 2 Load Dataset
 
 dataset = pd.read_csv("spam.csv", encoding="latin-1")
-#Meaning: spam.csv ngra file-a open panni read panrom.
+#Meaning: spam.csv ngra file ah open panni read panrom.
 
 dataset = dataset[['v1', 'v2']]
 #Meaning: Andha file-la neraya columns irukkalam, aana namaku v1 (Label) matrum v2 (Message) matum podhum.
@@ -117,4 +117,5 @@ plt.xlabel('Predicted')
 plt.ylabel('Actual')
 plt.title('Confusion Matrix')
 plt.show()
+
 
